@@ -1,10 +1,10 @@
-const {Pool}=require('pg');//all info conn
+const {Pool}=require('pg');
 
-const url = require('url');//url for myconn
+const url = require('url');
 require('dotenv').config();
 let DB_URL = process.env.DATABASE_URL;
-if (process.env.NODE_ENV == 'test') {
-    DB_URL = process.env.TEST_DB_URL;
+if (process.env.NODE_ENV == 'test' || process.env.NODE_ENV ==='dev' ) {
+    DB_URL = process.env.LOCAL_DB_URL;
 }
 if (!DB_URL) throw Error('enviroment DB_URL must be set')
 const allmyinfo = url.parse(DB_URL);
