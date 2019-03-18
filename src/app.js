@@ -19,7 +19,7 @@ app.engine('hbs', exphbs({
 }));
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
-app.use(favicon(path.join(__dirname, '..', 'public', 'logo.ico')));
+app.use(favicon(path.join(__dirname, '..', 'public', 'logo.svg')));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

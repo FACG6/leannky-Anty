@@ -1,4 +1,1 @@
-exports.get = (req, res) => res.render('home', {
-  layout: 'main',
-  js: 'home',
-});
+exports.get = (req, res) => res.send('Server is runnig now');
