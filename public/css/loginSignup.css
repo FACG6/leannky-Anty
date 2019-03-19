@@ -1,0 +1,19 @@
+.form__login{
+
+}
+.nav--message{
+    color: #EEEEEE;
+    font-size: 18px;
+}
+.footer{
+    background-color: #333333;
+    color: #EEEEEE;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form__login [input]{
+    min-height: 40px;
+}
