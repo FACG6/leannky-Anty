@@ -1,4 +1,4 @@
-exports.signupValidation = (req, res, next) => {
+exports.signupLoginValidation = (req, res, next) => {
   const { userName, password, confirmPassword } = req.body;
   if (!userName.trim() || !password.trim() || !confirmPassword.trim()) {
     return res.status(200).send(JSON.stringify('يجب ملئ جميع الحقول'));
