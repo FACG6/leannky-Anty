@@ -32,4 +32,5 @@ INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena'
 
 
 
+
 COMMIT;
