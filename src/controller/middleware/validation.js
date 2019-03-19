@@ -1,4 +1,4 @@
-exports.signupLoginValidation = (req, res, next) => {
+exports.signupValidation = (req, res, next) => {
   const { userName, password, confirmPassword } = req.body;
   if (!userName.trim() || !password.trim() || !confirmPassword.trim()) {
     return res.status(200).send(JSON.stringify('يجب ملئ جميع الحقول'));
@@ -12,8 +12,7 @@ exports.signupLoginValidation = (req, res, next) => {
   if (password.length < 3) {
     return res.status(200).send(JSON.stringify('كلمة المرور يجب ألا يقل عن 3 أحرف/أرقام'));
   }
-  
-  if (confirmPassword && (password.trim() !== confirmPassword.trim())) {
+  if (password.trim() !== confirmPassword.trim()) {
     return res.status(200).send(JSON.stringify('يجب تطابق كلمتي المرور'));
   }
   next();
