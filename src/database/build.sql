@@ -1,3 +1,6 @@
+BEGIN;
+DROP TABLE IF EXISTS users, consultant,posts CASCADE;
+
 
 CREATE TABLE users(
     id SERIAL  PRIMARY KEY  ,
@@ -20,5 +23,14 @@ CREATE TABLE posts(
     answer TEXT
 );
 INSERT INTO users(user_name,password) VALUES ('nour','1'),('deema','12'),('aseel','123');
-INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','222'),('Ayman Al-Quqa','ayman','333'),('Nareman Hellis','nareman','444');
+INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','222'),('Ayman Alquqa','ayman','333'),('Nareman Hellis','nareman','444');
+
+
+
+
+
+
+
+
+
 COMMIT;
