@@ -1,11 +1,12 @@
 {
-  "name": "leannky-Anty",
+  "name": "leannky-anty",
   "version": "1.0.0",
   "description": "most of women rights get lost becuse they dont know their legal rights specially inheritance rights,also women cann't resort to legal consultant on the real life such as fair,or not has mony.",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "test": "NODE_ENV=test node test/test.js | tap-spec",
+    "testdb": "NODE_ENV=test node test/dbTest.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,8 @@
     "supertest": "^4.0.2",
     "tap-spec": "^5.0.0",
     "tape": "^4.10.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }
