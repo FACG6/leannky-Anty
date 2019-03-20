@@ -3,9 +3,10 @@ const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
-const controller = require('./controller');
 const favicon = require('serve-favicon');
+const controller = require('./controller');
 const error = require('./controller/error');
+require('dotenv').config();
 
 const app = express();
 app.set('port', process.env.PORT || 3500);
@@ -24,7 +25,6 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(controller);
-
 app.use(error.client);
 app.use(error.server);
 module.exports = app;
