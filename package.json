@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "NODE_ENV=test node test/test.js | tap-spec",
     "testdb": "NODE_ENV=test node test/dbTest.js | tap-spec"
   },
@@ -20,11 +21,13 @@
   },
   "homepage": "https://github.com/FACG6/leannky-Anty#readme",
   "dependencies": {
+    "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^7.9.0",
     "serve-favicon": "^2.5.0"
   },
