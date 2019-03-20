@@ -22,3 +22,13 @@ exports.signupValidation = (req, res, next) => {
   }
   next();
 };
+exports.qUserValidation = (req, res, next) => {
+  const { qTitle, qContent } = req.body;
+  if (!qTitle.trim()) {
+    return res.status(400).send(JSON.stringify('العنوان يجب ألا يكون فارغاً'));
+  }
+  if (!qContent.trim()) {
+    return res.status(400).send(JSON.stringify('موضوع السؤال يجب ألا يكون فارغاً'));
+  }
+  next();
+};
