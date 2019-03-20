@@ -15,7 +15,7 @@ exports.signupPost = (req, res) => {
         return res.status(200).send(JSON.stringify({
           msg: 'تم انشاء الحساب بنجاح، يمكنكي الآن تسجيل الدخول' }));
       }
-      return res.status(200).send(JSON.stringify({ msg: 'لم يتم إنشاء الحساب مع الأسف' }));
+      return res.status(400).send(JSON.stringify({ msg: 'لم يتم إنشاء الحساب مع الأسف' }));
     })
     .catch(err => res.status(500).send(JSON.stringify({ msg: err })));
 };

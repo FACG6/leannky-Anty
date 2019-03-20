@@ -5,7 +5,7 @@ exports.isConsultant = (req, res, next) => {
   getCons(req.body.userName)
     .then((result) => {
       if (result.rows[0]) {
-        return res.status(200).send(JSON.stringify({ errorMsg: 'اسم المستخدم موجود مسبقا... اختر  اسم آخر' }));
+        return res.status(400).send(JSON.stringify({ errorMsg: 'اسم المستخدم موجود مسبقا... اختر  اسم آخر' }));
       }
       next();
     })
@@ -15,7 +15,7 @@ exports.isUser = (req, res, next) => {
   getUser(req.body.userName)
     .then((result) => {
       if (result.rows[0]) {
-        return res.status(200).send(JSON.stringify({ errorMsg: 'اسم المستخدم موجود مسبقا... اختر  اسم آخر' }));
+        return res.status(400).send(JSON.stringify({ errorMsg: 'اسم المستخدم موجود مسبقا... اختر  اسم آخر' }));
       }
       next();
     })
