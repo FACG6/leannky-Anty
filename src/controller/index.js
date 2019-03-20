@@ -9,9 +9,5 @@ const { hashPassword } = require('./middleware/hashPassword');
 
 router.get('/', home.get);
 router.get('/userProfile', getToken, userProfile.get);
-
 router.post('/signup', signupValidation, getToken, auth, isConsultant, isUser, hashPassword, home.signupPost);
-
-
-router.post('/signup', signupValidation, home.signupPost);
 module.exports = router;
