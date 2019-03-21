@@ -10,8 +10,8 @@ test('testing the tape', (assert) => {
 test('Request userProfile route', (t) => {
   request(app)
     .get('/userProfile')
-    .expect(200)
-    .expect('Content-Type', /html/)
+    .expect(302)
+    .expect('Content-Type', 'text/plain; charset=utf-8')
     .end((err) => {
       if (err) {
         t.error(err);
