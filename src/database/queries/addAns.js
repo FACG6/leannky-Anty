@@ -1,5 +1,6 @@
 const connection = require('../connection.js');
 
-const addAns = (answer, consultant_id)=> connection.query(`INSERT INTO posts.answer where consultant_id = id returning *`,[answer, consultant_id]);
+const addAns = (answer, consultant_id, post_id)=> connection.query(`UPDATE posts
+SET answer = $1, consultant_id = $2 where id = $3`,[answer, consultant_id, post_id]);
 
 module.exports = addAns;

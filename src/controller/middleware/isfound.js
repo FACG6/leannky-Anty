@@ -1,5 +1,6 @@
 const getCons = require('../../database/queries/getCons');
 const getUser = require('../../database/queries/getUser');
+const { compare } = require('bcrypt');
 
 exports.isConsultant = (req, res, next) => {
   getCons(req.body.userName)
@@ -19,5 +20,34 @@ exports.isUser = (req, res, next) => {
       }
       next();
     })
+    .catch(e => next(e));
+};
+exports.whoExist = (req, res, next) => {
+  const { userName } = req.body;
+  Promise.all([getUser(userName), getCons(userName)]).then((values) => {
+    if (values[0].rows[0]) {
+      req.user = {
+        type: 'user',
+        userName,
+        userId: values[0].rows[0].id,
+        hashed: values[0].rows[0].password,
+      };
+      next();
+    } else if (values[1].rows[0]) {
+      req.user = {
+        type: 'consultant',
+        userName,
+        consId: values[1].rows[0].id,
+        fullName: values[1].rows[0].full_name,
+        hashed: values[1].rows[0].password,
+      };
+      next();
+    } else {
+      req.user = {
+        type: 'not found',
+      };
+      next();
+    }
+  })
     .catch(e => next(e));
 };
