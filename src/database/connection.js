@@ -4,9 +4,13 @@ require('dotenv').config();
 
 let DB_URL = process.env.DATABASE_URL;
 if (process.env.NODE_ENV === 'testdb' || process.env.NODE_ENV === 'test') {
-  DB_URL = process.env.LOCAL_DB_URL;
+  DB_URL = process.env.HEROKU_POSTGRESQL_TEAL_URL;
 }
+console.log(DB_URL);
+
 const allmyinfo = url.parse(DB_URL);
+console.log(allmyinfo);
+
 const [user, password] = allmyinfo.auth.split(':');
 
 const somemyInfo = {

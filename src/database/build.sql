@@ -22,12 +22,13 @@ CREATE TABLE posts(
     consultant_id INTEGER REFERENCES consultant(id),
     answer TEXT
 );
-INSERT INTO users(user_name,password) VALUES ('nour','1'),('deema','12'),('aseel','123');
-INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','222'),('Ayman Alquqa','ayman','333'),('Nareman Hellis','nareman','444');
+INSERT INTO users(user_name,password) VALUES ('nour','14511'),('deema','12111'),('aseel','12344');
+INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','11144'),('Alaa Badra','alaabadra','22255'),('Ayman Alquqa','ayman','33344'),('Nareman Hellis','nareman','44455');
 
+INSERT INTO posts(title,content,answer) VALUES ('استشارة بالميراث','اريد ان استشيركم بخصوص موضوع الميراث الذي حدث معي قبل فترة','استشاراتك مجابة قبل ذلك');
+INSERT INTO posts(title,content,answer) VALUES ('-----استشارة بالميراث','---اريد ان استشيركم بخصوص موضوع الميراث الذي حدث معي قبل فترة','استشاراتك مجابة قبل ذلك------------');
 
-
-
+INSERT INTO posts(title, content, user_id) values ('welcome', 'to my page fgfg', 2);
 
 
 
