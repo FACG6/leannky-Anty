@@ -16,6 +16,8 @@ test('testing the tape', (assert) => {
 test('test fot getUser', (assert) => {
   DBRun('build.sql', (err, res) => {
     getUser('nour').then((result) => {
+      // console.log(result);
+      
       assert.equal(typeof (result), 'object', 'getUser successfully');
       assert.end();
     })
@@ -25,34 +27,37 @@ test('test fot getUser', (assert) => {
 test('test getPosts', (assert) => {
   DBRun('build.sql', (err, res) => {
     getPosts().then(result => {
-      // console.log(result);
-
-      // assert.equal()
+      console.log(result.rows[0].content);
+      
+      // assert.equal(result.rows[0].content,'content my question','should be "content my question"')
+      assert.end();
     })
   })
 })
 
-// test('test getPosts', (assert) => {
-//   DBRun('build.sql', (err, res) => {
-//     getMyPosts().then(result => {
-//       // console.log(result);
+test('test getMyPosts', (assert) => {
+  DBRun('build.sql', (err, res) => {
+    getMyPosts(2).then(result => {
+      
+      assert.end();
+      assert.equal(result.rows[0].title,'welcome user','should return welcome')
+     })
+     .catch(err => console.log(err))
+  })
+})
 
-//       // assert.equal()
-//     })
-//   })
-// })
+test('test getMyAns', (assert) => {
+  DBRun('build.sql', (err, res) => {
+    getMyAns(1).then(result => {
+      console.log(result.rows[0].answer);
 
-// test('test getPosts', (assert) => {
-//   DBRun('build.sql', (err, res) => {
-//     getMyAns().then(result => {
-//       // console.log(result);
+      assert.equal(result.rows[0].answer,'my answer','should return "my answer"')
+      assert.end();
+    })
+  })
+})
 
-//       // assert.equal()
-//     })
-//   })
-// })
-
-test('test getPosts', (assert) => {
+test('test getCons', (assert) => {
   DBRun('build.sql', (err, res) => {
     getCons('alaabadra').then(result => {
     
@@ -73,22 +78,23 @@ test('test addUser', (assert) => {
   })
 })
 
-// test('test getPosts', (assert) => {
-//   DBRun('build.sql', (err, res) => {
-//     addPost().then(result => {
-//       // console.log(result);
+test('test addPost', (assert) => {
+  DBRun('build.sql', (err, res) => {
+    addPost('welcome user', 'to my page user', 2).then(result => {
+      
 
-//       // assert.equal()
-//     })
-//   })
-// })
+      assert.equal(result.rows[0].content,'to my page user','should return "to my page user"')
+      assert.end();
+    })
+  })
+})
 
-// test('test getPosts', (assert) => {
-//   DBRun('build.sql', (err, res) => {
-//     addAns().then(result => {
-//       // console.log(result);
+test('test addAns', (assert) => {
+  DBRun('build.sql', (err, res) => {
+    addAns('welcome conultant', 4 , 5).then(result => {
 
-//       // assert.equal()
-//     })
-//   })
-// })
+      assert.equal(result.rows[0].consultant_id,4,'should return  consultant_id =4');
+      assert.end();
+    })
+  })
+})
