@@ -7,7 +7,7 @@ test('testing the tape', (assert) => {
   assert.equal(num, 1, 'pass');
   assert.end();
 });
-test('Request userProfile route', (t) => {
+/* test('Request userProfile route', (t) => {
   request(app)
     .get('/userProfile')
     .expect(302)
@@ -21,4 +21,4 @@ test('Request userProfile route', (t) => {
     });
 });
 
-test.onFinish(() => process.exit(0));
+test.onFinish(() => process.exit(0)); */
