@@ -20,4 +20,6 @@ router.post('/signup', signupValidation, getToken, auth, isConsultant, isUser, h
 router.post('/userq', qUserValidation, getToken, userQ.post);
 router.post('/login', loginValidation, whoExist, home.loginPost);
 
+
+router.post('/signup', signupValidation, home.signupPost);
 module.exports = router;

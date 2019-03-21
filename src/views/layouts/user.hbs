@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-{{>head}}
+
+<head>
+    {{> head}}
+</head>
 
 <body>
-    {{>userHeader}}
-    <main>
-        {{{body}}}
-    </main>
-    {{>footer}}
+       <header>
+        {{>userHeader}}
+    </header>
+    {{{ body }}}
+    <footer>
+        {{> footer}}
+    </footer>
     {{#each js}}
     <script src="js/{{this}}.js"></script>
     {{/each}}
 </body>
 
 </html>
+    
+    
+
