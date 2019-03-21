@@ -14,7 +14,7 @@ exports.get = (req, res) => {
 };
 exports.post = (req, res) => {
   const { qTitle, qContent } = req.body;
-  const userId = req.token;
+  const { userId } = req.token;
   addPost(qTitle, qContent, userId)
     .then((result) => {
       if (result.rows[0]) {

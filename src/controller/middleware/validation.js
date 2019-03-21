@@ -32,3 +32,11 @@ exports.qUserValidation = (req, res, next) => {
   }
   next();
 };
+exports.loginValidation = (req, res, next) => {
+  const { userName, password } = req.body;
+  if (!userName.trim() || !password.trim()) {
+    return res.status(400).send(JSON.stringify({
+      msg: 'يجب ملئ جميع الحقول' }));
+  }
+  next();
+};
