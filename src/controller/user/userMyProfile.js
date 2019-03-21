@@ -1,6 +1,6 @@
 exports.get = (req, res) => {
     if (req.token) {
-        res.render('userPrevQ', {
+        res.render('userMyProfile', {
             layout: 'user',
             js: ['domUser'],
             css: 'user',
