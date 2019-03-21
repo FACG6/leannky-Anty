@@ -1,3 +1,5 @@
 const connection = require('../connection');
-const getMyPosts = (user_id)=>connection.query(`select * from posts where user_id=id`,[user_id]);
-module.exports=getMyPosts;
+
+const getMyPosts = userId => connection.query('select * from posts where user_id=$1', [userId]);
+
+module.exports = getMyPosts;
