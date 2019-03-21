@@ -1,0 +1,22 @@
+<section>
+    <div class="contents">
+        <div class="myAsk">استفساراتي</div>
+        <div class="question">
+            <ul class="post">
+                <li>
+                    {{#each MyPost}}
+                    <div class="title">
+                        {{this.title}}
+                    </div>
+                    <div class="content">
+                        {{this.content}}
+                    </div>
+                    <div class="answer">
+                        {{this.answer}}
+                    </div>
+                    {{/each}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

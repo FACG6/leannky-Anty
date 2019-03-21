@@ -23,3 +23,4 @@ const somemyInfo = {
   ssl: process.env.hostname !== 'localhost',
 };
 module.exports = new Pool(somemyInfo);
+
