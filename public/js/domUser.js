@@ -12,5 +12,5 @@ document.querySelector('.sabqa').addEventListener('click', () => {
   window.location.href = './userPrevQ';
 });
 document.querySelector('.safhti').addEventListener('click', () => {
-  window.location.href = './userMyProfile';
+  window.location.href = '/userMyProfile';
 });
