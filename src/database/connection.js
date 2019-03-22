@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 const url = require('url');
 require('dotenv').config();
 
-let DB_URL = process.env.DATABASE_LOCAL;
+let DB_URL = process.env.DATABASE_URL;
 if (process.env.NODE_ENV === 'testdb' || process.env.NODE_ENV === 'test') {
   DB_URL = process.env.HEROKU_POSTGRESQL_TEAL_URL;
 } else if (process.env.NODE_ENV === 'dev') {
@@ -10,6 +10,7 @@ if (process.env.NODE_ENV === 'testdb' || process.env.NODE_ENV === 'test') {
 }
 const allmyinfo = url.parse(DB_URL);
 const [user, password] = allmyinfo.auth.split(':');
+console.log(user, password);
 
 const somemyInfo = {
   host: allmyinfo.hostname,
