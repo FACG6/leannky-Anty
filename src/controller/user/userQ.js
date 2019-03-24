@@ -6,7 +6,7 @@ exports.get = (req, res) => {
       layout: 'user',
       js: ['domUser', 'domUserQ'],
       css: 'user',
-      username: req.token.userName,
+      userName: req.token.userName,
     });
   } else {
     res.redirect('/');
