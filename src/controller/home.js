@@ -12,8 +12,8 @@ exports.get = (req, res) => {
     }
   } else {
     res.render('home', {
-      js: 'domSignup',
-      css: 'main',
+      js: ['domLogin', 'domSignup'],
+      css: 'loginSignup',
     });
   }
 };
@@ -47,7 +47,7 @@ exports.loginPost = (req, res) => {
           maxAge: 60 * 60 * 24 * 30,
           httpOnly: true,
         });
-        res.redirect('/userProfile');
+        res.status(302).send(JSON.stringify({ msg: '', redirect: 'userProfile' }));
       } else {
         res.status(401).send(JSON.stringify({ msg: 'كلمة المرور خطأ' }));
       }
@@ -70,7 +70,7 @@ exports.loginPost = (req, res) => {
           maxAge: 60 * 60 * 24 * 30,
           httpOnly: true,
         });
-        res.redirect('/consProfile');
+        res.status(302).send(JSON.stringify({ msg: '', redirect: 'consProfile' }));
       } else {
         res.status(401).send(JSON.stringify({ msg: 'كلمة المرور خطأ' }));
       }
