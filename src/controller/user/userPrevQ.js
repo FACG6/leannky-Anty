@@ -7,7 +7,7 @@ exports.get = (req, res) => {
       answer : 'الاجابة',
       js: ['domUser'],
       css: 'user',
-      username: req.token.userName,
+      userName: req.token.userName,
       result: req.result
         });
     }else{

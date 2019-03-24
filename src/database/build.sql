@@ -37,4 +37,5 @@ INSERT INTO posts(title, consultant_id,id ) values ('welcome conultant', 4,5);
 
 
 
+
 COMMIT;
