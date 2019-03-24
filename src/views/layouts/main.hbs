@@ -3,12 +3,15 @@
 {{>head}}
 
 <body>
-    {{>header}}
+    
     <main>
+        {{>header}}
         {{{body}}}
     </main>
     {{>footer}}
-    <script src="js/{{js}}.js"></script>
+    {{#each js}}
+    <script src="js/{{this}}.js"></script>
+    {{/each}}
 </body>
 
 </html>
