@@ -8,12 +8,13 @@ const { auth } = require('./middleware/authentication');
 const { isConsultant, isUser, whoExist } = require('./middleware/isfound');
 const { hashPassword } = require('./middleware/hashPassword');
 const userPrevQ = require('./user/userPrevQ');
-const {renderAllPosts} = require('./middleware/renderAllPosts');
+const { renderAllPosts } = require('./middleware/renderAllPosts');
 const userMyProfile = require('./user/userMyProfile');
-const {renderMyPosts} = require('./middleware/renderMyPosts');
+const { renderMyPosts } = require('./middleware/renderMyPosts');
 const consProfile = require('./consultant/consProfile');
 const { renderNotAns } = require('./middleware/renderForCons');
 const getNotAns = require('./consultant/consGetNotAns');
+const addans = require('./consultant/addAns');
 
 router.get('/', getToken, home.get);
 router.get('/userq', getToken, userQ.get);
@@ -22,12 +23,13 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 router.get('/userProfile', getToken, userProfile.get);
-router.get('/consProfile', getToken, renderNotAns, consProfile.get);
+router.get('/consProfile', getToken, consProfile.get);
 router.get('/getNotAns', getToken, renderNotAns, getNotAns.get);
 
 router.post('/signup', signupValidation, getToken, auth, isConsultant, isUser, hashPassword, home.signupPost);
 router.post('/userq', qUserValidation, getToken, userQ.post);
 router.post('/login', loginValidation, whoExist, home.loginPost);
+router.post('/addans', getToken, addans.post);
 
 router.get('/userPrevQ', getToken, renderAllPosts, userPrevQ.get);
 router.get('/userMyProfile', getToken, renderMyPosts, userMyProfile.get);
