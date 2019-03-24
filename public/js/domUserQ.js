@@ -19,8 +19,10 @@ addQ.addEventListener('click', (event) => {
       },
     })
       .then(res => res.json())
-      .then(res => msg.textContent = res)
-      .catch(e => msg.textContent = e);
+
+      .then(res =>  msg.textContent = res.msg)
+      
+      .catch(e => msg.textContent = e.error);
   } else {
     msg.textContent = 'الرجاء تعبئة جميع الحقول';
   }

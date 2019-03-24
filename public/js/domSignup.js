@@ -21,10 +21,10 @@ submitBtn.addEventListener('click', (event) => {
   })
     .then(res => res.json())
     .then((res) => {
-      if (res.msg) {
+      if (res) {
         msgField.textContent = res.msg;
       } else {
         msgField.textContent = '';
       }
-    }).catch((err) => { msgField.textContent = err; });
+    }).catch((err) => { msgField.textContent = err.msg; });
 });

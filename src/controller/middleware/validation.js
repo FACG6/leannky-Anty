@@ -1,4 +1,5 @@
 exports.signupValidation = (req, res, next) => {
+  
   const { userName, password, confirmPassword } = req.body;
   if (!userName.trim() || !password.trim() || !confirmPassword.trim()) {
     return res.status(400).send(JSON.stringify({

@@ -15,12 +15,15 @@ exports.get = (req, res) => {
 exports.post = (req, res) => {
   const { qTitle, qContent } = req.body;
   const { userId } = req.token;
+  console.log(req.token);
   addPost(qTitle, qContent, userId)
     .then((result) => {
       if (result.rows[0]) {
-        return res.status(200).send(JSON.stringify('تم اضافة الاستفسار بنجاح، الرجاء انتظار الاجابة خلال 24 ساعة وشكرا'));
+        return res.status(200).send({msg:'تم اضافة الاستفسار بنجاح، الرجاء انتظار الاجابة خلال 24 ساعة وشكرا'});
       }
-      return res.status(200).send(JSON.stringify('لم يتم إضافة الاستفسار بنجاح...'));
+      return res.status(200).send({msg:'لم يتم إضافة الاستفسار بنجاح...'});
     })
-    .catch(err => res.status(500).send(JSON.stringify({ err })));
+    .catch((err) => {
+      res.status(500).send(({error: err }));
+    });
 };

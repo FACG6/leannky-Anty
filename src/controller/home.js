@@ -17,18 +17,25 @@ exports.get = (req, res) => {
     });
   }
 };
+
 exports.signupPost = (req, res) => {
   const { userName, password } = req.body;
+  
   addUser(userName, password)
     .then((result) => {
       if (result.rows[0]) {
-        return res.status(200).send(JSON.stringify({
-          msg: 'تم انشاء الحساب بنجاح، يمكنكي الآن تسجيل الدخول' }));
+        return res.status(200).send({
+          msg: 'تم انشاء الحساب بنجاح، يمكنكي الآن تسجيل الدخول',
+        });
       }
-      return res.status(400).send(JSON.stringify({ msg: 'لم يتم إنشاء الحساب مع الأسف' }));
+      return res.status(400).send({ msg: 'لم يتم إنشاء الحساب مع الأسف' });
     })
-    .catch(err => res.status(500).send(JSON.stringify({ msg: err })));
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send({ msg: err });
+    });
 };
+
 exports.loginPost = (req, res) => {
   if (req.user.type === 'user') {
     compare(req.body.password, req.user.hashed, (err, match) => {
