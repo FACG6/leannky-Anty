@@ -61,3 +61,79 @@ nav{
     margin-bottom: 2px; 
     margin-left: 10px; 
 }
+/*##########################*/
+/* body section */
+/*##########################*/
+.container{
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 560px;
+    overflow: auto;
+    position: relative;
+}
+.container__content{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    float: left;
+    width: 50%;
+    margin: 5% 10%;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 420px;
+}
+.container__content--title{
+    font-family: 'Lateef', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+    text-align: right;
+}
+.titleNode--title{
+    text-align: right;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-top: 2px solid #6384d894;
+}
+.answer{
+    width: 80%;
+    height: 110px;
+    text-align: right;
+    padding: 10px;
+    resize: none;
+}
+.answer-node{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.submitBtn{
+    width: 80px;
+    height: 30px;
+    align-self: center; 
+    background: #E5E5E5;
+    border: 1px;
+    border-radius: 3px;
+    color: #292B30;
+    margin-right: 10px;
+    box-shadow: 2px 2px 4px 0px  rgba(0, 0, 0, 0.5);
+
+}
+.msg{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: brown;
+}
+.content{
+    margin: 5px 0;
+}
+.main-message{
+    font-family: 'Aref Ruqaa', sans-serif;
+    font-size: 18px;
+    color: #3064e8;
+    margin: 5px;
+}

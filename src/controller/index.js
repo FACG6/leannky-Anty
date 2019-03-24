@@ -13,6 +13,7 @@ const userMyProfile = require('./user/userMyProfile');
 const {renderMyPosts} = require('./middleware/renderMyPosts');
 const consProfile = require('./consultant/consProfile');
 const { renderNotAns } = require('./middleware/renderForCons');
+const getNotAns = require('./consultant/consGetNotAns');
 
 router.get('/', getToken, home.get);
 router.get('/userq', getToken, userQ.get);
@@ -22,6 +23,7 @@ router.get('/logout', (req, res) => {
 });
 router.get('/userProfile', getToken, userProfile.get);
 router.get('/consProfile', getToken, renderNotAns, consProfile.get);
+router.get('/getNotAns', getToken, renderNotAns, getNotAns.get);
 
 router.post('/signup', signupValidation, getToken, auth, isConsultant, isUser, hashPassword, home.signupPost);
 router.post('/userq', qUserValidation, getToken, userQ.post);
