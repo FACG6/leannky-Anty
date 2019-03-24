@@ -60,3 +60,23 @@
         margin-left: 20px;
 
     }
+    .userProfile-content{
+        font-size: 23px;
+        color: #333333;
+        margin: -6px 53px 20px 40px;
+        background-color: #C4C4C4;
+        width: 555px;
+        height: 146px;
+        border-radius: 3px;
+        border: 14px;
+        box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
+        align-self: flex-start;
+    }
+    .userProfile-title{
+        font-size: 40px;
+        color: #333333;
+        margin: 20px 50px 20px 50px;
+        font-family: 'Jomhuria', cursive;
+    }
+    
+    
