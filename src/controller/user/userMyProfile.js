@@ -9,5 +9,5 @@ if (req.token) {
   } else {
     res.redirect('/');
   }
-};
+
 
