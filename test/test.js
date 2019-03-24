@@ -1,12 +1,13 @@
 const test = require('tape');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const request = require('supertest');
 const app = require('../src/app');
-/*
+
 test('Request signup route ', (t) => {
   request(app)
     .post('/signup')
     .send({
-      userName: 'ahmedisammm',
+      userName: 'aheeemekkkkkkkkm',
       password: '123456',
       confirmPassword: '123456',
     })
@@ -22,10 +23,11 @@ test('Request signup route ', (t) => {
       }
     });
 });
+
 test('Request / page no cookie', (t) => {
   request(app)
     .get('/')
-    .expect(200) 
+    .expect(200)
     .expect('Content-Type', 'text/html; charset=utf-8')
     .end((err, res) => {
       if (err) {
@@ -37,6 +39,7 @@ test('Request / page no cookie', (t) => {
       }
     });
 });
+
 test('Request / route , cookie', (t) => {
   request(app)
     .get('/')
@@ -52,6 +55,7 @@ test('Request / route , cookie', (t) => {
       }
     });
 });
+
 test('Request userprofile route no cookie', (t) => {
   request(app)
     .get('/userProfile')
@@ -67,6 +71,7 @@ t.equal(res.header.location, '/', 'must redirect to home');
       }
     });
 });
+
 test('Request userprofile route , cookie', (t) => {
   request(app)
     .get('/userProfile')
@@ -113,6 +118,7 @@ test('Request /userQ route ,cookie', (t) => {
       }
     });
 });
+
 test('Request userq when post route ', (t) => {
   request(app)
     .post('/userq')
@@ -126,12 +132,13 @@ test('Request userq when post route ', (t) => {
     .end((err, res) => {
       if (err) {
         t.error(err);
-      } else {       
-       t.equal(JSON.parse(res.text).msg, 'تم اضافة الاستفسار بنجاح، الرجاء انتظار الاجابة خلال 24 ساعة وشكرا', 'regst');
+      } else {
+        t.equal(JSON.parse(res.text).msg, 'تم اضافة الاستفسار بنجاح، الرجاء انتظار الاجابة خلال 24 ساعة وشكرا', 'regst');
         t.end();
       }
     });
 });
+
 test('Request user prev profile route no cookie', (t) => {
   request(app)
     .get('/userPrevQ')
@@ -141,8 +148,7 @@ test('Request user prev profile route no cookie', (t) => {
       if (err) {
         t.error(err);
       } else {
-        
-t.equal(res.header.location, '/', 'must redirect to home');
+        t.equal(res.header.location, '/', 'must redirect to home');
         t.end();
       }
     });
@@ -163,12 +169,12 @@ test('Request userprevprofile route , cookie', (t) => {
       }
     });
 });
-*/
+
 test('Request user /userMyProfile no cookie', (t) => {
   request(app)
     .get('/userMyProfile')
     .expect(302)
-    .expect('Content-Type', "text/html; charset=utf-8")
+    .expect('Content-Type', 'text/plain; charset=utf-8')
     .end((err, res) => {
       if (err) {
         t.error(err);
@@ -211,19 +217,19 @@ test('request logout route no cookie', (t) => {
 });
 test('Request logout ,cookie', (t) => {
   request(app)
-      .get('/logout')
-      .set('Cookie', ['jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Im1vaGFtZWQiLCJ1c2VySWQiOjYsImNvbnN1bHRhbnQiOmZhbHNlLCJsb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNTUzMTc1NjIxfQ.nXV81b4ySr_-Ez-Qt2Kqe29MWltIU7LHT3ymB4249sU'])
-      .expect(302)
-      .expect('Content-Type', 'text/plain; charset=utf-8')
-      .end((err, res) => {
-        if (err) {
-          t.error(err);
-        } else {
-          t.equal(res.headers.location, '/', 'Response redirct to home ');
-          t.end();
-        }
-      });
-  });
+    .get('/logout')
+    .set('Cookie', ['jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Im1vaGFtZWQiLCJ1c2VySWQiOjYsImNvbnN1bHRhbnQiOmZhbHNlLCJsb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNTUzMTc1NjIxfQ.nXV81b4ySr_-Ez-Qt2Kqe29MWltIU7LHT3ymB4249sU'])
+    .expect(302)
+    .expect('Content-Type', 'text/plain; charset=utf-8')
+    .end((err, res) => {
+      if (err) {
+        t.error(err);
+      } else {
+        t.equal(res.headers.location, '/', 'Response redirct to home ');
+        t.end();
+      }
+    });
+});
 
 
 test.onFinish(() => process.exit(0));
