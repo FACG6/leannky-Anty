@@ -25,7 +25,7 @@ CREATE TABLE posts(
 INSERT INTO users(user_name,password) VALUES ('nour','1'),('deema','12'),('aseel','123');
 INSERT INTO consultant(full_name,user_name,password) VALUES ('Dena Moeen','dena','111'),('Alaa Badra','alaa','222'),('Ayman Alquqa','ayman','333'),('Nareman Hellis','nareman','444');
 INSERT INTO posts(title, content, user_id) values ('welcome', 'to my page fgfg', 2);
-
+INSERT INTO posts(title, content, user_id, answer, consultant_id) values ('welcome2', 'to my page fgfgddddcd', 2, 'this is the only consultant answer', 1);
 
 
 
