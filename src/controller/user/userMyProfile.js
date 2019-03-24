@@ -1,5 +1,4 @@
-exports.get = (req, res) => {
-  if (req.token) {
+if (req.token) {
     res.render('userPrevMy', {
       layout: 'user',
       js: ['domUser'],
@@ -11,3 +10,4 @@ exports.get = (req, res) => {
     res.redirect('/');
   }
 };
+
