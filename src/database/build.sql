@@ -28,9 +28,4 @@ INSERT INTO posts(title, content, user_id) values ('welcome', 'to my page fgfg',
 INSERT INTO posts(title, content, user_id, answer, consultant_id) values ('welcome2', 'to my page fgfgddddcd', 2, 'this is the only consultant answer', 1);
 
 
-
-
-
-
-
 COMMIT;
