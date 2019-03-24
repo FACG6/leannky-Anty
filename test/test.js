@@ -7,7 +7,7 @@ test('Request signup route ', (t) => {
   request(app)
     .post('/signup')
     .send({
-      userName: 'aheeemekkkkkkkkm',
+      userName: 'aheeyyyyuuuuuuy',
       password: '123456',
       confirmPassword: '123456',
     })
