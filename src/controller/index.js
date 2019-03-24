@@ -11,6 +11,8 @@ const userPrevQ = require('./user/userPrevQ');
 const {renderAllPosts} = require('./middleware/renderAllPosts');
 const userMyProfile = require('./user/userMyProfile');
 const {renderMyPosts} = require('./middleware/renderMyPosts');
+const consProfile = require('./consultant/consProfile');
+const { renderNotAns } = require('./middleware/renderForCons');
 
 router.get('/', getToken, home.get);
 router.get('/userq', getToken, userQ.get);
@@ -19,6 +21,7 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 router.get('/userProfile', getToken, userProfile.get);
+router.get('/consProfile', getToken, renderNotAns, consProfile.get);
 
 router.post('/signup', signupValidation, getToken, auth, isConsultant, isUser, hashPassword, home.signupPost);
 router.post('/userq', qUserValidation, getToken, userQ.post);
