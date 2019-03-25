@@ -13,7 +13,6 @@ const allmyinfo = url.parse(DB_URL);
 
 
 const [user, password] = allmyinfo.auth.split(':');
-console.log(user, password);
 
 const somemyInfo = {
   host: allmyinfo.hostname,
