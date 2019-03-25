@@ -1,23 +1,25 @@
-<section>
-    <div class="contents">
-        <div class="myAsk">استفساراتي</div>
-        <div class="question">
-            <ul class="post">
-                <li>
-                    {{#each result}}
-                    <div class="title">
-                        {{this.title}}
+
+<section class="prevQ">
+    <div class="prevQ-container">
+        <span class="prevQ-title">استفسارات سابقة</span>
+
+          {{#each result}}
+          <div class="question">
+          <div class="subCont">
+                      <span class="q-content ">  عنوان الاستشارة المدخلة :
+                        <span class="text"><br>{{this.title}}</span></span>
                     </div>
-                    <div class="content">
-                        {{this.content}}
+                    <div class="subCont">
+                      <span class="q-content "> موضوع الاستشارة المدخلة :
+                        <span class="text"><br>{{this.content}}</span></span>
                     </div>
-                    <div class="answer">
-                        {{this.answer}}
-                    </div>
-                    {{/each}}
-                </li>
-            </ul>
-        </div>
+                          <div class="subCont">
+                        <span class="q-content ">الاجابة :
+                        <span class="text"><br>{{this.answer}}</span></span>
+                      </div>             
+                  </div>
+          {{/each}}
     </div>
+   
 </section>
 

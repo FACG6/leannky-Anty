@@ -3,32 +3,23 @@
     <div class="prevQ-container">
         <span class="prevQ-title">استفسارات سابقة</span>
 
-          <div class="scrollVertical">
           {{#each result}}
-          <div class="contents-div">
           <div class="question">
-          <div class="titleQ">
+          <div class="subCont">
                       <span class="q-content ">  عنوان الاستشارة المدخلة :
-
                         <span class="text"><br>{{this.title}}</span></span>
                     </div>
-                    <div class="subjectQ">
+                    <div class="subCont">
                       <span class="q-content "> موضوع الاستشارة المدخلة :
-
                         <span class="text"><br>{{this.content}}</span></span>
-
                     </div>
-                                      <div class="answerQ">
+                          <div class="subCont">
                         <span class="q-content ">الاجابة :
                         <span class="text"><br>{{this.answer}}</span></span>
                       </div>             
-
-
                   </div>
-          </div>
 
           {{/each}}
-        </div>
     </div>
    
 </section>
