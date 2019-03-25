@@ -25,7 +25,6 @@ nav{
     justify-content: center;
     margin-left:22px;
     margin-bottom: 2px;
-
 }
 .nav__main:hover, .nav__prev:hover, .nav__logout:hover{
     border-bottom: 3px solid #A3BBF8;

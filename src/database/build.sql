@@ -39,5 +39,7 @@ INSERT INTO posts(title, consultant_id,id ) values ('welcome conultant', 4,5);
 
 
 
+INSERT INTO consultant (user_name, full_name, password) VALUES 
+('أيمن','أيمن القوقا', '$2b$10$.qwhTYf6cL.UZyqYRerjXu4PE2637sfAwhH/Vxz1thDBML.srvzRG');
 
 COMMIT;
