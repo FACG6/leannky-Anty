@@ -11,7 +11,7 @@ exports.getToken = (req, res, next) => {
         next();
       }
     });
-  } else {    
+  } else {
     next();
   }
 };
