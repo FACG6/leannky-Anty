@@ -65,11 +65,9 @@ const displayData = (data) => {
         })
           .then(res => res.json())
           .then(() => {
-            msg.textContent = 'تمت الاجابة بنجاح';
-            setTimeout(() => {
-              contentNode.removeChild(titleNode);
-              contentNode.removeChild(newNode);
-            }, 500);
+            swal("تمت اﻹجابة بنجاح");
+            contentNode.removeChild(titleNode);
+            contentNode.removeChild(newNode);
           })
           .catch(e => msg.textContent = e);
       }
