@@ -11,7 +11,7 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 position: relative; 
-height: 510px;
+height: 549px;
 }
 .prevQ-container{
     padding: 10px;
@@ -48,7 +48,7 @@ padding-right: 45px;
     background: #C4C4C4;
     color: #000; 
     margin-right: -248px;
-    height: 168px;
+    height: 164px;
 }
 .q-content{
     margin-bottom: 77px;
@@ -65,7 +65,7 @@ padding-right: 45px;
     height:700px; 
     direction: ltr;
     border-radius: 1%;
-    width: 76%;
+    width: 74%;
     margin-right: 82px;
     
 }
