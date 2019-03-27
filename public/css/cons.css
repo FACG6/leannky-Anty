@@ -54,6 +54,9 @@ nav{
 .nav__welcome span{
     margin: 0 10px;
 }
+.nav__welcome--name{
+    color: #b34700;
+}
 .nav__logout{
     text-decoration: none;
     color: #EEEEEE;
@@ -99,13 +102,6 @@ nav{
     margin-top: 5px;
     border-top: 2px solid #6384d894;
 }
-.answer{
-    width: 80%;
-    height: 110px;
-    text-align: right;
-    padding: 10px;
-    resize: none;
-}
 .answer-node{
     display: flex;
     flex-direction: row;
@@ -121,7 +117,7 @@ nav{
     color: #292B30;
     margin-right: 10px;
     box-shadow: 2px 2px 4px 0px  rgba(0, 0, 0, 0.5);
-
+    
 }
 .msg{
     margin-top: 5px;
@@ -136,4 +132,62 @@ nav{
     font-size: 18px;
     color: #3064e8;
     margin: 5px;
+}
+/*##########################*/
+/* body section-previous answers */
+/*##########################*/
+.answer-prev{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: right;
+    padding: 10px;
+    resize: none;
+    background-color: #d0d0ca;
+    margin-top: 22px;
+    margin-left: 22px;
+}
+.underline{
+    border-bottom: 1px solid #3064e8;
+}
+
+.consAns{
+    font-size: 23px;
+    color: #333333;
+    background-color: #C4C4C4;
+    width: 100%;
+    height: 376px;
+    border-radius: 8px;
+    border: 14px;
+    box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
+    align-self: flex-start;
+}
+.answer{
+        width: 80%;
+        height: 110px;
+        text-align: right;
+        padding: 10px;
+        background-color: #efefe8;
+        resize: none;
+}
+.ans-content{
+    font-family: 'Lato';
+    width: 80%;
+    border-radius: 3px;
+    border: 14px;
+    box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
+    align-self: flex-start;  
+        
+}
+.ans-content--title{
+    display: block;
+    margin: 5px 5px 1px 50px;
+    font-size: 13px;
+    color: #333333;
+} 
+.consAns-text{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 17px;
+    color: #000;
 }
