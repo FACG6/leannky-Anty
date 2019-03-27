@@ -29,10 +29,11 @@
 .form__login label{
     display: flex;
     flex-direction: column;
+    font-family: 'Lato';
 }
 .form__login input{
-   font-family:  'Lateef', cursive;
-   font-size: 24px;
+   font-family: 'Lato';
+   font-size: 20px;
    padding: 5px 10px 5px 10px;
    height: 30px;
    margin-left: 20px;
@@ -43,6 +44,7 @@
    width: 150px;
 }
 .form__login label button{
+    font-family: 'Lato';
     background-color: #F3F2F2;
     color: #333333;
     width: 78px;
@@ -60,7 +62,8 @@
 .form__login label span{
     margin-bottom: 5px;
     color: #F3F2F2;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: 'Lato';
 }
 #login-form-validation{
     color: #ef432f !important;
@@ -69,6 +72,7 @@
 }
 .show-error-msg{
     visibility: visible !important;
+    font-family: 'Lato';
 }
 /*##########################*/
 /* signup section */
@@ -101,7 +105,7 @@
     font-size: 40px;
     color: #333333;
     margin: 20px 50px 20px 50px;
-    font-family: 'Jomhuria', cursive;
+    font-family: 'Aref Ruqaa',sans-serif;
 }
 .signup-form{
     margin: 20px 50px 20px 50px;
@@ -109,6 +113,7 @@
     flex-direction: column;
 }
 .input{
+    font-family: 'Lato', serif;
     margin-bottom: 20px;
     height: 50px;
     padding: 10px;
@@ -117,13 +122,13 @@
     font-weight: bold;
     background-color: #F3F2F2;
     border-radius: 10px;
-    font-family: 'Lateef', cursive;
 }
 .input:focus{
     border:4px solid #A3BBF8;
     border-radius: 10px;
 }
 .signup-form button {
+    font-family: 'Lato';
     height: 50px;
     background-color: #E5E5E5;
     border-radius: 10px;

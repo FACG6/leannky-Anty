@@ -2,23 +2,25 @@
     <div class="prevQ-container">
         <span class="prevQ-title">استفسارات سابقة</span>
 
-        {{#each result}}
-        <div class="question">
-            <div class="subCont">
-                <span class="q-content "> عنوان الاستشارة المدخلة :
-                    <span class="text"><br>{{this.title}}</span></span>
-            </div>
-            <div class="subCont">
-                <span class="q-content "> موضوع الاستشارة المدخلة :
-                    <span class="text"><br>{{this.content}}</span></span>
-            </div>
-            <div class="subCont">
-                <span class="q-content ">الاجابة :
-                    <span class="text"><br>{{this.answer}}</span></span>
-            </div>
-        </div>
+          {{#each result}}
+          <div class="question">
+          <div class="subCont">
+                      <span class="q-content ">  عنوان الاستشارة المدخلة :
+                        <span class="text"><br>{{this.title}}</span></span>
+                    </div>
+                    <div class="subCont">
+                      <span class="q-content "> موضوع الاستشارة المدخلة :
+                        <span class="text"><br>{{this.content}}</span></span>
+                    </div>
+                          <div class="subCont">
+                        <span class="q-content ">الاجابة :
+                        <span class="text"><br>{{this.answer}}</span></span>
+                      </div>             
+                  </div>
 
-        {{/each}}
+          {{/each}}
     </div>
+   
+</section>
 
 </section>
