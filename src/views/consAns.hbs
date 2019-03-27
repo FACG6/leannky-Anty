@@ -1,20 +1,19 @@
-<section class="container-consAns">
-    <div id="content-consAns" class="content--consAns">
+<section class="container">
+    <div id="content-consAns" class="container__content">
         <div class="consAns">
-            <span class="consAns-title">اجوبتي السابقة</span>
+            <span class="main-message underline">اجوبتي السابقة</span>
             {{#each data}}
-            <div class="answerr">
-                <div class="contentt">
-                    <span class="ans-content "> عنوان الاستشارة المدخلة :
+            <div class="answer-prev">
+                <div class="ans-content">
+                    <span class="ans-content--title "> عنوان الاستشارة المدخلة :
                     <span class="consAns-text">{{this.title}}</span></span>
-
                 </div>
-                <div class="contentt">
-                     <span class="ans-content "> موضوع الاستشارة المدخلة :
+                <div class="ans-content">
+                     <span class="ans-content--title"> موضوع الاستشارة المدخلة :
                     <span class="consAns-text">{{this.content}}</span></span>
                 </div>
-                <div class="contentt">
-                     <span class="ans-content ">الاجابة :
+                <div class="ans-content">
+                     <span class="ans-content--title">الاجابة :
                     <span class="consAns-text">{{this.answer}}</span>
                 </div>
             </div>
