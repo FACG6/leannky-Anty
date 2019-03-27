@@ -4,6 +4,10 @@ const password = document.querySelector('#password');
 const confirmPassword = document.querySelector('#confirmPassword');
 const msgField = document.querySelector('.msg');
 
+const clearFeilds = (...name) => {
+  name.forEach(element => element.value = '');
+};
+
 const validate = (userName, password, confirmPassword) => {
   if (!userName|| !password|| !confirmPassword) {
     msgField.textContent = 'يجب تعبئة جميع الحقول';
@@ -49,10 +53,11 @@ submitBtn.addEventListener('click', (event) => {
     })
       .then(res => res.json())
       .then((res) => {
-        if (res.msg) {
-          msgField.textContent = res.msg;
+        if (res.msg === 'تم انشاء الحساب بنجاح، يمكنكي الآن تسجيل الدخول') {
+          swal(res.msg);
+          clearFeilds(userName, password, confirmPassword);
         } else {
-          msgField.textContent = '';
+          msgField.textContent = res.msg;
         }
       }).catch((err) => { msgField.textContent = err; });
   }
