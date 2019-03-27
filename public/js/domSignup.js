@@ -9,7 +9,7 @@ const clearFeilds = (...name) => {
 };
 
 const validate = (userName, password, confirmPassword) => {
-  if (!userName|| !password|| !confirmPassword) {
+  if (!userName || !password || !confirmPassword) {
     msgField.textContent = 'يجب تعبئة جميع الحقول';
     return false;
   }
