@@ -18,4 +18,4 @@ exports.post = (req, res) => {
   } else {
     res.redirect('/');
   }
-}
+};

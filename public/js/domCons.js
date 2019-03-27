@@ -48,7 +48,7 @@ const displayData = (data) => {
         msg.textContent = 'يجب إدخال على الأقل 15 حرفاً';
         return;
       }
-      //post data to database
+      // post data to database
 
       if (answer.value.trim()) {
         const postData = {
@@ -65,11 +65,9 @@ const displayData = (data) => {
         })
           .then(res => res.json())
           .then(() => {
-            msg.textContent = 'تمت الاجابة بنجاح';
-            setTimeout(() => {
-              contentNode.removeChild(titleNode);
-              contentNode.removeChild(newNode);
-            }, 500);
+            swal("تمت اﻹجابة بنجاح");
+            contentNode.removeChild(titleNode);
+            contentNode.removeChild(newNode);
           })
           .catch(e => msg.textContent = e);
       }

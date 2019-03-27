@@ -1,7 +1,7 @@
-const addQ = document.querySelector("#addQ");
+const addQ = document.querySelector('#addQ');
 const qTitle = document.querySelector('#qTitle');
 const qContent = document.querySelector('#qContent');
-const msg = document.querySelector('.msg');
+const msgField = document.querySelector('.msg');
 
 addQ.addEventListener('click', (event) => {
   event.preventDefault();
@@ -19,9 +19,15 @@ addQ.addEventListener('click', (event) => {
       },
     })
       .then(res => res.json())
-      .then(res => msg.textContent = res)
-      .catch(e => msg.textContent = e);
+      .then((res) => {
+        if (res.msg) {
+          msgField.textContent = res.msg;
+        } else {
+          msgField.textContent = '';
+        }
+      })
+      .catch((err) => { msgField.textContent = err; });
   } else {
-    msg.textContent = 'الرجاء تعبئة جميع الحقول';
+    msgField.textContent = 'الرجاء تعبئة جميع الحقول';
   }
 });

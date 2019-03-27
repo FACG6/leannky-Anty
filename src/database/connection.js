@@ -22,5 +22,6 @@ const somemyInfo = {
   user,
   password,
   ssl: process.env.hostname !== 'localhost',
+  idleTimeoutMillis: 1000,
 };
 module.exports = new Pool(somemyInfo);
