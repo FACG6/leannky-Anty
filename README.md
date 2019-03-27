@@ -7,15 +7,35 @@ create a website to help shying and affraid woman ask about her legal rights by 
 
 leannky Anty website serves this idea and make Gazian's woman aware of her legal rights.
 ## User Experience
+### Woman
 - as a woman i want to create new account by just typing username and password.
 - as a woman i can login to my account smoothly.
-- as a woman  
-Woman can easly create a new account and then login to our website to use our serves by asking experienced legal consultant any legal related question she need to know perfect answer for it. She also can see other women's questions and their answers. 
+- as a woman  i can post my question.
+- as a woman i can view my previous questions with their answers if any.
+- as a womman i can view other woman's questions with their answers if any .
+### Consultant
+- as a consultant i can login to my existing account smoothly.
+- as a counsultant i can view new posted questions and try to answer them if i want to do that.
+- as a consultant i can view my previous answers.
 
 ## Tecknology Used:
-We implemented and coded this website using new web development technology like express, postgress database in addition to html5 and css.
+- html.
+- css.
+- express server.
+- express-handlebars.
+- postgres sql database.
+
+## Database Schema
+![](public/img/schema.png)
 
 We also used figma website to design UI and UX [prototype](https://www.figma.com/file/Ccf3FqdidXR2o2YMmbKmOxh4/Leannky-Anty?node-id=0%3A1) and then make user experience to get real users feedback.
+
+## How to use
+- clone [rep](https://github.com/FACG6/leannky-Anty.git).
+- cd leannky-Anty
+- npm i
+- create .env file and add SECRET and DATABASE_URL.
+- type (npm run start).
 
 ## Team:
 * Haneen (team leader).
