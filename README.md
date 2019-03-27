@@ -3,10 +3,13 @@
 most of women rights get lost becuse they dont know their legal rights specially inheritance rights,also women cann't resort to legal consultant on the real life such as fair,or not has mony.
 
 ## Solution:
-make a website to help shying and affraid woman ask about her legal rights by contacting legal consultant for free.
+create a website to help shying and affraid woman ask about her legal rights by contacting legal consultant for free.
 
 leannky Anty website serves this idea and make Gazian's woman aware of her legal rights.
 ## User Experience
+- as a woman i want to create new account by just typing username and password.
+- as a woman i can login to my account smoothly.
+- as a woman  
 Woman can easly create a new account and then login to our website to use our serves by asking experienced legal consultant any legal related question she need to know perfect answer for it. She also can see other women's questions and their answers. 
 
 ## Tecknology Used:
