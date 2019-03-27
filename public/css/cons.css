@@ -99,12 +99,15 @@ nav{
     margin-top: 5px;
     border-top: 2px solid #6384d894;
 }
-.answer{
-    width: 80%;
+.answerr{
     height: 110px;
     text-align: right;
     padding: 10px;
     resize: none;
+    background-color: #d0d0ca;
+    margin-top: 22px;
+    margin-left: 22px;
+    margin-right: 22px;
 }
 .answer-node{
     display: flex;
@@ -136,4 +139,89 @@ nav{
     font-size: 18px;
     color: #3064e8;
     margin: 5px;
+}
+.container-consAns{
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 560px;
+    overflow: auto;
+    position: relative;
+}
+.content--consAns{
+    background-color: #00000060;
+    box-shadow: 3px 4px 0px #00000025, 2px 3px 3px #737373;
+    float: left;
+    margin-top: 58px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    height: 438px;
+    width: 54%;
+    min-width: 286px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 22px;
+    overflow: auto;
+}
+.consAns-title{
+    font-size: 25px;
+    color: #333333;
+    margin: 20px 50px 20px 50px;
+    font-family: 'Aref Ruqaa',sans-serif;}
+.consAns-content{
+    font-size: 40px;
+        color: #333333;
+        margin: 20px 50px 20px 50px;
+        font-family: 'Jomhuria', cursive;
+}
+.consAns-answer{
+    font-size: 40px;
+        color: #333333;
+        margin: 20px 50px 20px 50px;
+        font-family: 'Jomhuria', cursive;
+}
+.consAns{
+    font-size: 23px;
+    color: #333333;
+    margin: 28px 9px 32px 58px;
+    background-color: #C4C4C4;
+    width: 432px;
+    height: 376px;
+    border-radius: 8px;
+    border: 14px;
+    box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
+    align-self: flex-start;
+}
+.answer{
+    margin: 15px 50px 20px 50px;
+    background-color: #d0d0d0d9;
+    height: 110px;
+    text-align: right;
+    padding: 10px;
+    resize: none;
+}
+.contentt{
+    font-family: 'Lato';
+    font-size: 20px;
+    color: #333333;
+    width: 555px;
+    border-radius: 3px;
+        border: 14px;
+        box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
+        align-self: flex-start;  
+        
+}
+.ans-content{
+    display: block;
+    margin: 5px 5px 1px 50px;
+    font-size: 13px;
+    color: #333333;
+} 
+.consAns-text{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-size: 17px;
+    color: #000;
 }
