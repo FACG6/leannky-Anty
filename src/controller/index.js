@@ -35,5 +35,4 @@ router.post('/addans', getToken, addans.post);
 
 router.get('/userPrevQ', getToken, renderAllPosts, userPrevQ.get);
 router.get('/userMyProfile', getToken, renderMyPosts, userMyProfile.get);
-router.post('/signup', signupValidation, home.signupPost);
 module.exports = router;

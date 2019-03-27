@@ -65,11 +65,15 @@
     }
    
     .hellow{
-        color: #EEEEEE;
+        color:#A3BBF8;
         font-family: 'Aref Ruqaa', sans-serif;
         font-size: 24px;
-        margin-left: 9px;
+        margin-left: 35px;
 
+    }
+    .helloSantanses{
+        color: #eee;
+        margin-left: 5px;
     }
    
     .logout-btn{
@@ -82,6 +86,7 @@
         box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
         align-self: flex-start;
         font-family: 'Lato';
+        margin-left: 18px;
     }
     .logout:hover{
         color: #F3F2F2;
@@ -111,20 +116,19 @@
         border: none;
        
     }
+
     .question{
         margin: 15px 50px 20px 50px;
         background-color: #C4C4C4;
 
     }
     .subCont{
-        font-family: 'Lato';
-        font-size: 20px;
-        color: #333333;
+        padding: 5px 30px ;
         width: 555px;
         border-radius: 3px;
         border: 14px;
         box-shadow: 0px 0px 4px 0px rgb(196,196,196,50%);
-        align-self: flex-start;  
+        align-self: flex-start; 
     }
     
     
@@ -133,18 +137,33 @@
         display: flex;
         flex-direction: column;
     }
-    .label , .q-content{
+   
+    .consultationTitle{
+        font-size: 25px;
+        font-weight: bolder;
+        color: #b34700;
+        font-family: Arial,Helvetica,sans-serif;
+    }
+
+    .text{
+        font-size: 18px;
+        color: #000;
+        font-family: Arial,Helvetica,sans-serif;
+        line-height: 50%
+    }
+    .q-content{
+        color: #b34700;
+        font-size: 20px;
+        margin-bottom: 9px 50px ;
+        font-family: Arial,Helvetica,sans-serif;
+    }
+    .label {
      display: block;
      margin: 1px 50px 1px 50px;
      font-size: 20px;
      color: #333333;
     }
-    .text{
-        margin-top: 1px;
-        margin-bottom: 1px;
-        font-size: 18px;
-        color: #000;
-    }
+    
     .input{
         margin: 20px 50px 20px 50px;
         height: 50px;
@@ -186,3 +205,41 @@
         margin-right: 50px;
     }
     
+///////////////
+@media only screen and (max-width: 850px) {
+    .nav--content{
+        margin: 0;
+    }
+    .nav--message{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .form__login {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .nav--content{
+        margin: 0;
+        justify-content: center;
+    }
+    .nav--message{
+        display: none;
+    }
+    
+    .form__login input{
+        
+        font-size: 14px;
+    }
+     .form__login label button{
+
+         width: 50px;
+         align-items: center;
+         margin-bottom: 10px;
+        
+     }

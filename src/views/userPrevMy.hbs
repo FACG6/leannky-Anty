@@ -1,24 +1,26 @@
-
 <section class="prevQ">
     <div class="prevQ-container">
-        <span class="prevQ-title">استفسارات سابقة</span>
+        <span class="prevQ-title">استفساراتي</span>
 
           {{#each result}}
           <div class="question">
           <div class="subCont">
-                      <span class="q-content ">  عنوان الاستشارة المدخلة :
-                        <span class="text"><br>{{this.title}}</span></span>
+                        <span class="consultationTitle"><br>{{this.title}}</span></span>
                     </div>
                     <div class="subCont">
-                      <span class="q-content "> موضوع الاستشارة المدخلة :
                         <span class="text"><br>{{this.content}}</span></span>
                     </div>
                           <div class="subCont">
                         <span class="q-content ">الاجابة :
+                           <img class="img" src="https://trustanswer.com/wp-content/themes/child-jQ1etgtRzS2b3JMv5T50btY/images/stars5.png" alt="trustanswer" width="94" height="22" >
+
                         <span class="text"><br>{{this.answer}}</span></span>
                       </div>             
                   </div>
+
           {{/each}}
     </div>
    
+</section>
+
 </section>
