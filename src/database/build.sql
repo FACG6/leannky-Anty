@@ -24,5 +24,7 @@ CREATE TABLE posts(
 );
 INSERT INTO consultant (user_name, full_name, password) VALUES 
 ('أيمن','أيمن القوقا', '$2b$10$.qwhTYf6cL.UZyqYRerjXu4PE2637sfAwhH/Vxz1thDBML.srvzRG');
+INSERT INTO users (user_name, password) values 
+('Ayman', '$2b$10$.qwhTYf6cL.UZyqYRerjXu4PE2637sfAwhH/Vxz1thDBML.srvzRG');
 
 COMMIT;

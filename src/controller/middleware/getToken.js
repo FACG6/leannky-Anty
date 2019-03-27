@@ -5,7 +5,7 @@ exports.getToken = (req, res, next) => {
     verify(req.cookies.jwt, process.env.SECRET, (error, payload) => {
       if (error) {
         res.clearCookie('jwt');
-        res.status(401).send('Unauthorized');
+        res.status(401).send({ msg: 'Unauthorized' });
       } else {
         req.token = payload;
         next();

@@ -48,7 +48,7 @@ const displayData = (data) => {
         msg.textContent = 'يجب إدخال على الأقل 15 حرفاً';
         return;
       }
-      //post data to database
+      // post data to database
 
       if (answer.value.trim()) {
         const postData = {

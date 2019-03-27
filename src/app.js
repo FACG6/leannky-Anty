@@ -10,7 +10,8 @@ require('dotenv').config();
 
 const app = express();
 app.set('port', process.env.PORT || 3500);
-
+app.use(cookieParser());
+app.disable('x-powered-by');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', exphbs({
   extname: 'hbs',
@@ -21,7 +22,6 @@ app.engine('hbs', exphbs({
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, '..', 'public', 'logo.svg')));
-app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(controller);

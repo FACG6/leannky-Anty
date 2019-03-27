@@ -1,6 +1,5 @@
 const getCons = require('../../database/queries/getCons');
 const getUser = require('../../database/queries/getUser');
-const { compare } = require('bcrypt');
 
 exports.isConsultant = (req, res, next) => {
   getCons(req.body.userName)
