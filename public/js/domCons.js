@@ -87,7 +87,7 @@ const displayData = (data) => {
 
 // windows on load (load data)
 
-mainMessage.textContent = 'استفسارات جديدة';
+mainMessage.textContent = '>>استفسارات جديدة<<';
 window.onload = fetch('/getNotAns', {
   method: 'GET',
   credentials: 'same-origin',
