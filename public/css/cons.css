@@ -165,23 +165,6 @@ nav{
     border-radius: 22px;
     overflow: auto;
 }
-.consAns-title{
-    font-size: 25px;
-    color: #333333;
-    margin: 20px 50px 20px 50px;
-    font-family: 'Aref Ruqaa',sans-serif;}
-.consAns-content{
-    font-size: 40px;
-        color: #333333;
-        margin: 20px 50px 20px 50px;
-        font-family: 'Jomhuria', cursive;
-}
-.consAns-answer{
-    font-size: 40px;
-        color: #333333;
-        margin: 20px 50px 20px 50px;
-        font-family: 'Jomhuria', cursive;
-}
 .consAns{
     font-size: 23px;
     color: #333333;
