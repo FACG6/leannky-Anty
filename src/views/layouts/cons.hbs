@@ -9,9 +9,9 @@
     </main>
     {{>footer}}
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    {{#if js}}
-    <script src="js/{{js}}.js"></script>
-    {{/if}}
+    {{#each js}}
+    <script src="js/{{this}}.js"></script>
+    {{/each}}
 </body>
 
 </html>
