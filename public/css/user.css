@@ -26,8 +26,9 @@
         
     }
     .userq-contanier{
-        height: 455px;
-
+        min-height: 480px;
+        padding: 5px;
+        display: block;
     }
     .prevQ-container{
         overflow: auto;
@@ -147,7 +148,7 @@
     }
     .input{
         margin: 20px 50px 20px 50px;
-        height: 50px;
+        min-height: 50px;
         padding: 10px;
         color: #333333;
         font-size: 20px;
@@ -176,7 +177,6 @@
         font-size: 20px;
         width: 90%;
         color: #333333;
-
     }
     .msg{
         color: #b34700;
@@ -185,4 +185,24 @@
         font-family: 'Lato';
         margin-right: 50px;
     }
-    
+
+/*##########################*/
+/* media query */
+/*##########################*/
+@media only screen and (max-width: 850px) {
+    .nav--content{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .userq-contanier {
+        width: 375px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .userq {
+        width: 375px;
+        justify-items: center;
+    }
+}
+

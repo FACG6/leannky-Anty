@@ -20,10 +20,13 @@ addQ.addEventListener('click', (event) => {
     })
       .then(res => res.json())
       .then((res) => {
-        if (res.msg) {
-          msgField.textContent = res.msg;
+        if (res.msg === 'تم اضافة الاستفسار بنجاح، الرجاء انتظار الاجابة خلال 24 ساعة وشكرا') {
+          swal('تم اضافة الاستفسار بنجاح، الرجاء انتظار الاجابة خلال 24 ساعة وشكرا');
+          qTitle.value = '';
+          qContent.value = '';
+          msgField.value = '';
         } else {
-          msgField.textContent = '';
+          msgField.textContent = res.msg;
         }
       })
       .catch((err) => { msgField.textContent = err; });
