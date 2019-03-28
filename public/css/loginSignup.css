@@ -92,7 +92,6 @@
     margin-top: 40px;
     margin-left: 50px;
     margin-bottom: 40px;
-    height: 430px;
     width: 54%;
     min-width: 300px;;
     background-color: #00000060;
@@ -118,7 +117,7 @@
     height: 50px;
     padding: 10px;
     color: #333333;
-    font-size: 27px;
+    font-size: 18px;
     font-weight: bold;
     background-color: #F3F2F2;
     border-radius: 10px;
@@ -193,3 +192,50 @@
         min-width: 200px;
     }
 }
+
+/* media query */
+/*##########################*/
+@media only screen and (max-width: 850px) {
+    .signup{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .userq-contanier {
+        width: 375px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .userq {
+        width: 375px;
+        justify-items: center;
+    }
+}
+@media only screen and (max-width: 411px) {
+    .input {
+      font-size: 14px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .input {
+      font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .signup {
+      height: 90vh;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .signup {
+      height: 67vh;
+    }
+}
+
+@media only screen and (max-width: 71vh) {
+    .signup {
+      height: 71vh;
+    }
+}
+
