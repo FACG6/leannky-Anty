@@ -21,7 +21,7 @@ nav{
 }
 .nav__main{
     text-decoration: none;
-    color: #A3BBF8;
+    color: #EEEEEE;
     justify-content: center;
     margin-left:22px;
     margin-bottom: 2px;
@@ -146,17 +146,10 @@ nav{
     background-color: #d0d0ca;
     margin-top: 22px;
     margin-left: 22px;
-<<<<<<< HEAD
 }
 .underline{
     border-bottom: 1px solid #3064e8;
 }
-=======
-}
-.underline{
-    border-bottom: 1px solid #3064e8;
-}
->>>>>>> cfe1d418158ddc3583ef45cdb71a7f248c35dbfc
 
 .consAns{
     font-size: 23px;

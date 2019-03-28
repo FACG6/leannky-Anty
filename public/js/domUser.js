@@ -43,5 +43,4 @@ window.onload = myUrl.forEach((element) => {
     document.querySelector(element.class).style.color = '#A3BBF8';
   }
   document.querySelector(element.class).style.cursor = 'pointer';
-
 });

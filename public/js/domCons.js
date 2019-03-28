@@ -65,7 +65,7 @@ const displayData = (data) => {
         })
           .then(res => res.json())
           .then(() => {
-            swal("تمت اﻹجابة بنجاح");
+            swal('تمت اﻹجابة بنجاح');
             contentNode.removeChild(titleNode);
             contentNode.removeChild(newNode);
           })
