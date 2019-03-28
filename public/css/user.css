@@ -34,10 +34,12 @@
         overflow: auto;
     }
     .userProfile-title , .userq-title ,.prevQ-title{
-        font-size: 40px;
-        color: #333333;
+        font-family: 'Aref Ruqaa', sans-serif;
+        font-size: 20px;
+        color: #3064e8;
+        margin: 5px;
+
         margin: 20px 50px 20px 50px;
-        font-family: 'Aref Ruqaa',sans-serif;
     }
     
     .userProfile-content {
@@ -136,15 +138,26 @@
     }
     .label , .q-content{
      display: block;
-     margin: 1px 50px 1px 50px;
-     font-size: 20px;
+     margin: 1px 50px 12px 50px;
+     font-size: 16px;
      color: #333333;
     }
     .text{
-        margin-top: 1px;
-        margin-bottom: 1px;
+        display: block;
+       
+     margin: 1px 50px 1px 50px;
         font-size: 18px;
-        color: #000;
+        color: #0767a2;
+    }
+    .answer-cons{
+        display: block;
+       
+        margin: 1px 50px 1px 50px;
+           font-size: 18px;
+           color: #0767a2;
+    }
+    .text-content{
+        margin: 1px 50px 1px 50px;
     }
     .input{
         margin: 20px 50px 20px 50px;
