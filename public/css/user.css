@@ -4,8 +4,9 @@
     background-position: center;
     background-size: cover;
     height: 549px;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
+
 }
 .profile-container ,.userq-contanier,.prevQ-container{
     background-color: #00000030;
@@ -15,11 +16,16 @@
     margin-left: 50px;
     margin-bottom: 40px;
     width: 54%;
+    min-height: 480px;
+    overflow: scroll;
     min-width: 300px;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border-radius: 22px;  
+    border-radius: 22px; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 480px; 
     }
 .userq-contanier{
     min-height: 480px;
