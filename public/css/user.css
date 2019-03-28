@@ -198,11 +198,25 @@
     .userq-contanier {
         width: 375px;
     }
+    .form__login {
+        margin-bottom: 5px;
+    }
+    
+    
 }
 @media only screen and (max-width: 375px) {
     .userq {
         width: 375px;
-        justify-items: center;
+        
+    }
+    .sabqa .form__login{
+        font-size: 14px;
+    }
+    .nav--content{
+        padding: 5px;
+    }
+    .form__login label button{
+        margin-bottom: 5px;
     }
 }
 
